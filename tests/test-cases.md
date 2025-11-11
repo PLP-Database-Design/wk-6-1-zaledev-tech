@@ -1,60 +1,97 @@
-<img width="1896" height="967" alt="catalog" src="https://github.com/user-attachments/assets/af85a029-1bbd-4ee5-ba56-4fc931a285a4" />This document outlines key functional and non-functional test cases.
+&lt;!-- tests/test-cases.md --&gt;
+# ✅ Test Cases – Book Store App QA Project  
+**Team:** `&lt;PLP Testers&gt;`  
+**Last updated:– 2025-11-11
 
-ID: TC-001
+---
 
-## Title: Search by Partial Title (Case-Insensitive)
+### TC-001 – Search by Partial Title (Case-Insensitive)
+**Pre-conditions:**  
+Catalog contains a book titled “The Great Gatsby”.
 
-Pre-conditions: Catalog contains a book titled “The Great Gatsby.”
+**Steps:**  
+1. Navigate to `/catalog`.  
+2. Enter query with mixed case and extra spaces: `"  the Great gatsby "`.  
+3. Press Enter or click Search icon.
 
-## Steps:
+**Expected Result:**  
+Catalog displays only the matching book; no error toast.
 
-i.Navigate to the Catalog page (/catalog).
+**Post-conditions:**  
+Search input retains the trimmed query.
 
-ii.Enter a partial mixed-case query: "  the Great gatsby ".
+**Evidence:**  
+![search](https://github.com/user-attachments/assets/8c883f8c-3aa2-4012-93d2-9fb85a306aef)
 
-iii.Press Enter or click Search.
+---
 
-## Expected Result:
-The catalog view updates to show only the matching book (“The Great Adventure of QA”). No error message displayed.
+### TC-002 – Redirect from Root to Catalog
+**Pre-conditions:**  
+App running at `http://localhost:3000/`.
 
-## Post-conditions:
-Search query remains visible in the search bar.
+**Steps:**  
+1. Open browser and navigate to `/`.
 
-## Evidence:
-Screenshot/GIF paths:<img width="1913" height="866" alt="search" src="https://github.com/user-attachments/assets/8c883f8c-3aa2-4012-93d2-9fb85a306aef" />
+**Expected Result:**  
+URL changes to `/catalog` without full page reload.
 
+**Post-conditions:**  
+Catalog page renders.
 
+**Evidence:**  
+![catalog](https://github.com/user-attachments/assets/af85a029-1bbd-4ee5-ba56-4fc931a285a4)
 
-ID:TC-002
+---
 
-## Tittle:Redirect from root to catalog
+### TC-003 – Add Book to Cart from Catalog
+**Pre-conditions:**  
+Catalog loaded; at least one book visible.
 
-## Pre-conditions: App running at /; user role irrelevant
-Steps:
+**Steps:**  
+1. Click “Buy Now” on any book.
 
-i.Navigate to /
+**Expected Result:**  
+Cart badge increments by 1; book appears in cart.
 
-## Expected Result: User is redirected to /catalog
+**Post-conditions:**  
+`app.cart` key in localStorage updated.
 
-## Post-conditions: URL changes to /catalog
+**Evidence:**  
+Screenshot of badge + localStorage (to be attached during execution).
 
-## Evidence: Screenshot of /catalog page:![Uploading catalog.png…]()
+---
 
+### TC-004 – Update Quantity in Cart
+**Pre-conditions:**  
+Cart contains ≥1 book.
 
+**Steps:**  
+1. Go to `/cart`.  
+2. Click “+” to increment quantity.
 
-## ID: TC-003
+**Expected Result:**  
+Subtotal recalculates correctly (rounded to 2 decimals).
 
-## Title: Add book to cart from catalog
+**Post-conditions:**  
+`app.cart` updated.
 
-## Pre-conditions: Catalog page loaded, all book visible
+**Evidence:**  
+Screenshot of updated subtotal.
 
-## Steps:
-i.Open the bookstore catalog
-ii.Click “Buy Now” on a book
+---
 
-## Expected Result: Book is added to cart; cart badge increments
+### TC-005 – Remove Book from Cart
+**Pre-conditions:**  
+Cart contains ≥1 book.
 
-## Post-conditions: app.cart in localStorage updated
+**Steps:**  
+1. Click “Remove” button on a line item.
 
-## Evidence: Screenshot of cart badge and localStorage
+**Expected Result:**  
+Item disappears; subtotal updates; if last item, cart shows empty state.
 
+**Post-conditions:**  
+`app.cart` updated.
+
+**Evidence:**  
+Screenshot of empty-cart state.
