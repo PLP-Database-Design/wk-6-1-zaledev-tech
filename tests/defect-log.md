@@ -1,5 +1,5 @@
 # 🐞 Defect Log – Book Store App QA Project  
-**Team:** `&lt;your-team-name&gt;`  
+**Team:** `&lt; PLP Testers &gt;`  
 **Current as of:** 2025-11-11  
 **Environment:** Local dev, Chrome 130, macOS 14, commit `bfb73f8`
 
