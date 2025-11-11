@@ -42,7 +42,7 @@ i.Navigate to /
 
 
 
-##ID: TC-003
+## ID: TC-003
 
 ## Title: Add book to cart from catalog
 
