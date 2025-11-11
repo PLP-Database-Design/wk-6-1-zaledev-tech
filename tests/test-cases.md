@@ -27,34 +27,34 @@ Screenshot/GIF paths:<img width="1913" height="866" alt="search" src="https://gi
 
 ID:TC-002
 
-##Tittle:Redirect from root to catalog
+## Tittle:Redirect from root to catalog
 
-##Pre-conditions: App running at /; user role irrelevant
+## Pre-conditions: App running at /; user role irrelevant
 Steps:
 
 i.Navigate to /
 
-##Expected Result: User is redirected to /catalog
+## Expected Result: User is redirected to /catalog
 
-##Post-conditions: URL changes to /catalog
+## Post-conditions: URL changes to /catalog
 
-##Evidence: Screenshot of /catalog page:![Uploading catalog.png…]()
+## Evidence: Screenshot of /catalog page:![Uploading catalog.png…]()
 
 
 
 ##ID: TC-003
 
-##Title: Add book to cart from catalog
+## Title: Add book to cart from catalog
 
-##Pre-conditions: Catalog page loaded, all book visible
+## Pre-conditions: Catalog page loaded, all book visible
 
-##Steps:
+## Steps:
 i.Open the bookstore catalog
 ii.Click “Buy Now” on a book
 
-##Expected Result: Book is added to cart; cart badge increments
+## Expected Result: Book is added to cart; cart badge increments
 
-##Post-conditions: app.cart in localStorage updated
+## Post-conditions: app.cart in localStorage updated
 
-##Evidence: Screenshot of cart badge and localStorage
+## Evidence: Screenshot of cart badge and localStorage
 
