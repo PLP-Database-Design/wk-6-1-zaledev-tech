@@ -1,8 +1,13 @@
 # ✅ Test Cases – Book Store App QA Project  
-**Team:** `&lt;PLP Testers&gt;`  
-**Last updated:– 2025-11-11
+**Team:** :**PLP Testers**;`  
+**Last updated:– 2025-11-13
+## TEST SUMMARY
+This report summarizes the functional and integration testing of the Bookstore E-Commerce Web App.
+The focus was on core shopping flows (catalog → cart → checkout → payment → order tracking) and administrative modules.
+Testing covered  paths aligned with the defined Functional Requirement (FR) codes.
 
 ---
+
 ## TEST CASES
 
 | ID | Feature | Objective | Expected Result | Actual Result | Status | Risk Link |
@@ -33,6 +38,17 @@
 |T24|Refund Audit Trail|Verify refund recorded with audit entry|Refund appears; audit entry logged|||FR-R02|
 |T25|Order Lifecycle|Verify status transitions Pending→Paid→Fulfilled→Delivered|Each step reflected in order history|Works as expected|Passed|FR-O05|
 |T26|Security Hygiene|Verify user-generated content sanitized||||FR-X04|
+
+---
+|Metric	|Count|
+|Total Test Cases|	26|
+|Passed|	20|
+|Failed| |
+|Not Executed	|6|
+Pass Percentage|	77%|
+
+
+
 
 
 
