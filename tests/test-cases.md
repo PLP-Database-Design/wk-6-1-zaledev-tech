@@ -3,6 +3,8 @@
 **Last updated:– 2025-11-11
 
 ---
+## TEST CASES
+
 | ID | Feature | Objective | Expected Result | Actual Result | Status | Risk Link |
 |----|---------|-----------|----------------|---------------|--------|-----------| 
 |T1|	Redirect to homepage|	Verify root URL redirects user to catalog page	|Redirects to /catalog|	Works as expected|	Passed	|FR-M01|
